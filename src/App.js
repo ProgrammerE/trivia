@@ -37,7 +37,7 @@ function App() {
     >
       <header className="App-header">
         <h1>{decodeHtml(question)}</h1>
-        <h1>Henlo</h1>
+        <h1>{question}</h1>
 
 
         
