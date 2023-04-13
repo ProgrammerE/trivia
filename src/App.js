@@ -12,6 +12,7 @@ function App() {
       .get("https://odd-teal-hummingbird-gear.cyclic.app/books")
       .then((response) => {
         setQuestion(response);
+      console.log(response)
       });
       
   };
