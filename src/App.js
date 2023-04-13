@@ -9,7 +9,7 @@ function App() {
     setQuestion("");
     
     axios
-      .get("https://opentdb.com/api.php?amount=1&type=multiple")
+      .get("https://odd-teal-hummingbird-gear.cyclic.app/books")
       .then((response) => {
         setQuestion(response.data);
       });
