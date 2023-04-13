@@ -10,7 +10,7 @@ function App() {
 
     fetch('https://odd-teal-hummingbird-gear.cyclic.app/books', { method: 'GET' })
     .then((response) => {
-        setQuestion(response);
+      setQuestion(response);
     console.log(response);
     });
     
