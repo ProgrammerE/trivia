@@ -7,13 +7,13 @@ function App() {
 
   const fetchQuestion = () => {
     setQuestion("");
-    
-    axios
-      .get("https://odd-teal-hummingbird-gear.cyclic.app/books")
-      .then((response) => {
+
+    fetch('https://odd-teal-hummingbird-gear.cyclic.app/books', { method: 'GET' })
+    .then((response) => {
         setQuestion(response);
-      console.log(response);
-      });
+    console.log(response);
+    });
+    
       
   };
 
