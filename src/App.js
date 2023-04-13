@@ -11,7 +11,7 @@ function App() {
     axios
       .get("https://odd-teal-hummingbird-gear.cyclic.app/books")
       .then((response) => {
-        setQuestion(response);
+        setQuestion(response[0]);
       });
   };
 
