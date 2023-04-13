@@ -37,8 +37,8 @@ function App() {
       }}
     >
       <header className="App-header">
-        <h1>{decodeHtml(response)}</h1>
-        <h1>{JSON.stringify(response)}</h1>
+        <h1>{decodeHtml(question)}</h1>
+        <h1>{JSON.stringify(question)}</h1>
 
         <br />
         <br />
