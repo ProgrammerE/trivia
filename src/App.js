@@ -9,7 +9,7 @@ function App() {
     setQuestion("");
     
     axios
-      .get("https://jsonplaceholder.typicode.com/users/1")
+      .get("https://opentdb.com/api.php?amount=1&type=multiple")
       .then((response) => {
         setQuestion(response);
       });
