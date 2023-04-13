@@ -11,7 +11,7 @@ function App() {
     axios
       .get("https://opentdb.com/api.php?amount=1&type=multiple")
       .then((response) => {
-        setQuestion(response.data);
+        setQuestion(response);
       });
   };
 
