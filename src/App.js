@@ -9,10 +9,12 @@ function App() {
     setQuestion("");
     
     axios
-      .get("https://odd-teal-hummingbird-gear.cyclic.app/books")
+      .get("https://jsonplaceholder.typicode.com/users/1")
       .then((response) => {
-        setQuestion(response[0]);
-      });
+        setQuestion(response)
+        return response
+      })
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {
@@ -36,8 +38,8 @@ function App() {
       }}
     >
       <header className="App-header">
-        <h1>{decodeHtml(question)}</h1>
-        <h1>{JSON.stringify(question)}</h1>
+        <h1>{decodeHtml(response)}</h1>
+        <h1>{JSON.stringify(response)}</h1>
 
         <br />
         <br />
