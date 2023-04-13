@@ -37,11 +37,7 @@ function App() {
     >
       <header className="App-header">
         <h1>{decodeHtml(question)}</h1>
-        <h1>{question}</h1>
 
-
-        
-        
         <br />
         <br />
         <button className="Button" onClick={fetchQuestion}>
