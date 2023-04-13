@@ -12,7 +12,6 @@ function App() {
       .get("https://jsonplaceholder.typicode.com/users/1")
       .then((response) => {
         setQuestion(response);
-        return response;
       });
       .catch((err) => console.log(err));
   };
