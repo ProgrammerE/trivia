@@ -7,14 +7,12 @@ function App() {
 
   const fetchQuestion = () => {
     setQuestion("");
-
-    fetch('https://odd-teal-hummingbird-gear.cyclic.app/books', { method: 'GET' })
-    .then((response) => {
-      setQuestion(response);
-    console.log(response);
-    });
     
-      
+    axios
+      .get("https://opentdb.com/api.php?amount=1&type=multiple")
+      .then((response) => {
+        setQuestion(response.data);
+      });
   };
 
   useEffect(() => {
@@ -52,3 +50,4 @@ function App() {
 }
 
 export default App;
+
