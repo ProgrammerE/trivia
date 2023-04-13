@@ -9,7 +9,7 @@ function App() {
     setQuestion("");
     
     axios
-      .get("https://odd-teal-hummingbird-gear.cyclic.app/books")
+      .get("https://jsonplaceholder.typicode.com/posts/1")
       .then((response) => {
         setQuestion(response.data);
       });
