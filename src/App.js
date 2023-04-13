@@ -13,7 +13,7 @@ function App() {
       .then((response) => {
         setQuestion(response);
       });
-      .catch((err) => console.log(err));
+      
   };
 
   useEffect(() => {
