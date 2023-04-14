@@ -7,7 +7,7 @@ function getData() {
 
   useEffect(() => {
     fetch("https://opentdb.com/api.php?amount=1&type=multiple")
-    .then(res => res.json())
+    .then(res => await res.text())
     .then(data => setData(data))
     console.log(data);
   }, []);
