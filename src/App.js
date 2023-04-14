@@ -10,7 +10,15 @@ function callTriviaApi() {
 }
 
 function callRaddyApi() {
-  fetch('https://odd-teal-hummingbird-gear.cyclic.app/')
+  fetch('https://odd-teal-hummingbird-gear.cyclic.app/', {
+    method: "GET", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    headers: {
+      //"Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+      "Access-Control-Allow-Origin": *
+    }
+  });
     .then(res => res)
     .then(res => alert(res))
     .then(alert('callRaddyApi'))
@@ -22,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>hello call 2054</h1>
+        <h1>hello call 2057</h1>
         <button onClick={callTriviaApi}>Call trivia API</button>
         <button onClick={callRaddyApi}>Call raddy API</button>
       </header>
