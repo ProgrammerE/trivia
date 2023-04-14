@@ -14,6 +14,8 @@ function callRaddyApi() {
     .then(res => res)
     .then(res => alert(res))
     .then(alert('callRaddyApi'))
+    console.log('hello')
+    console.log(res)
     //.then(json => alert(JSON.stringify(json)))
 }
 
@@ -21,12 +23,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>hello call 2015</h1>
+        <h1>hello call 2018</h1>
         <button onClick={callTriviaApi}>Call trivia API</button>
         <button onClick={callRaddyApi}>Call raddy API</button>
       </header>
 
-      <p>leave out books</p>
+      <p>console log</p>
 
     </div>
   );
