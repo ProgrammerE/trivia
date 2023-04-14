@@ -10,7 +10,7 @@ function callTriviaApi() {
 }
 
 function callRaddyApi() {
-  fetch('https://odd-teal-hummingbird-gear.cyclic.app/books')
+  fetch('https://odd-teal-hummingbird-gear.cyclic.app')
     .then(res => res)
     .then(res => alert(res))
     .then(alert('callRaddyApi'))
