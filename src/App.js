@@ -2,17 +2,13 @@ import React, { useState, useEffect } from "react";
 
 import "./App.css";
 
-function App() {
+function getData() {
   const [data, setData] = useState({});
 
-  const getData = () => {
-    setData("");
-    
-    
-  };
-
   useEffect(() => {
-    getData();
+    fetch("https://opentdb.com/api.php?amount=1&type=multiple")
+    .then(res => res.json())
+    .then(data => setData(data))
   }, []);
 
   const decodeHtml = (html) => {
