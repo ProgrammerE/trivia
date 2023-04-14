@@ -10,7 +10,7 @@ function callTriviaApi() {
 }
 
 function callRaddyApi() {
-  fetch('https://odd-teal-hummingbird-gear.cyclic.app/', { method: 'GET', mode: "cors", headers: {'Access-Control-Allow-Origin': *} })
+  fetch('https://odd-teal-hummingbird-gear.cyclic.app/', { method: 'GET', mode: "cors", headers: {} })
     .then(res => res)
     .then(res => alert(res))
     .then(alert('callRaddyApi'))
