@@ -1,25 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const [data, setData] = React.useState(null);
+  const [message, setMessage] = useState("");
 
-  React.useEffect(() => {
-    fetch("https://opentdb.com/api.php?amount=1&type=multiple")
+  useEffect(() => {
+    fetch("https://odd-teal-hummingbird-gear.cyclic.app/books")
       .then((res) => res.json())
-      .then((data) => setData(data));
-      console.log(data);
-      console.log("HELLO");
+      .then((data) => setMessage(data));
   }, []);
 
   return (
     <div className="App">
-      <header className="App-header">
-        
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
+      <h1>Get This</h1>
+      <h1>{message}</h1>
     </div>
   );
 }
 
-export default App;
+export default App
