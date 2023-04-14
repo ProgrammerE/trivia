@@ -1,40 +1,24 @@
-import React, { useState, useEffect } from "react";
-
+import React from "react";
+import logo from "./logo.svg";
 import "./App.css";
 
-function getData() {
-  const [data, setData] = useState({});
+function App() {
+  const [data, setData] = React.useState(null);
 
-  useEffect(() => {
-    fetch("https://opentdb.com/api.php?amount=1&type=multiple")
-    .then(res => await res.text())
-    .then(data => setData(data))
-    console.log(data);
+  React.useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => setData(data.message));
   }, []);
 
-  const decodeHtml = (html) => {
-    var txt = document.createElement("textarea");
-    txt.innerHTML = html;
-    return txt.value;
-  };
-
   return (
-    <div>
+    <div className="App">
       <header className="App-header">
-        <h1>Get bonked</h1>
-        <h1>{decodeHtml(data)}</h1>
-        <h1>{JSON.stringify(data)}</h1>
-
-
-        <br />
-        <br />
-        <button className="Button" onClick={getData}>
-          Ask me another!
-        </button>
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>{!data ? "Loading..." : data}</p>
       </header>
     </div>
   );
 }
 
 export default App;
-
