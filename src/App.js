@@ -14,8 +14,8 @@ function callRaddyApi() {
     .then(res => res)
     .then(res => alert(res))
     .then(alert('callRaddyApi'))
-    console.log('hello')
-    console.log(res)
+    console.log('hello');
+    console.log(res);
     //.then(json => alert(JSON.stringify(json)))
 }
 
