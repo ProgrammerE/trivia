@@ -5,7 +5,7 @@ function callApi() {
   fetch('https://odd-teal-hummingbird-gear.cyclic.app/books')
     .then(res => res)
     .then(text => alert(text))
-    .then(alert('wtf')
+    .then(alert('wtf'))
     //.then(json => alert(JSON.stringify(json)))
 }
 
