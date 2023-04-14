@@ -29,10 +29,7 @@ function App() {
     <div
       className="App"
       style={{
-        backgroundImage: `url("https://source.unsplash.com/random/1600x1200/?abstract")`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        height: "100vh",
+        
       }}
     >
       <header className="App-header">
