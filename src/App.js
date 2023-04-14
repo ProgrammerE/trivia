@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 function callApi() {
-  fetch('https://odd-teal-hummingbird-gear.cyclic.app/books')
+  fetch('https://opentdb.com/api.php?amount=1&type=multiple')
     .then(res => res)
     .then(res => alert(res))
     .then(alert('wtf'))
