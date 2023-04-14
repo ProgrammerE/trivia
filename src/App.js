@@ -4,13 +4,13 @@ import "./App.css";
 class App extends Component {
     constructor(props) {
         super(props);
-        //this.state = { apiResponse: "" };
+        this.state = { "" };
     }
 
     callAPI() {
         fetch("https://opentdb.com/api.php?amount=1&type=multiple")
             .then(res => res.text())
-            //.then(res => this.setState({ apiResponse: res }))
+            .then(res => this.setState({ res }))
             .catch(err => err);
     }
 
@@ -24,7 +24,7 @@ class App extends Component {
                 <header className="App-header">
                     <h1>Welcome to React</h1>
                 </header>
-                <p>{this.state.apiResponse}</p>
+                <p>{this.state}</p>
             </div>
         );
     }
