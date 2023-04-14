@@ -3,16 +3,16 @@ import axios from "axios";
 import "./App.css";
 
 function App() {
-  const [question, setQuestion] = useState("");
+  const [data, setData] = useState("");
 
-  const fetchQuestion = () => {
-    setQuestion("");
+  const getData = () => {
+    setData("");
     
     
   };
 
   useEffect(() => {
-    fetchQuestion();
+    getData();
   }, []);
 
   const decodeHtml = (html) => {
@@ -22,14 +22,14 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
-        <h1>{decodeHtml(question)}</h1>
-        <h1>{JSON.stringify(question)}</h1>
+        <h1>{decodeHtml(data)}</h1>
+        <h1>{JSON.stringify(data)}</h1>
 
         <br />
         <br />
-        <button className="Button" onClick={fetchQuestion}>
+        <button className="Button" onClick={getData}>
           Ask me another!
         </button>
       </header>
