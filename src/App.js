@@ -3,7 +3,7 @@ import './App.css';
 
 function callApi() {
   fetch('https://opentdb.com/api.php?amount=1&type=multiple')
-    .then(data => res.json())
+    .then(res => res.json())
     .then(json => alert(JSON.stringify(json)))
 }
 
