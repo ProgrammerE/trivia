@@ -5,7 +5,7 @@ function App() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("/api")
+    fetch("https://opentdb.com/api.php?amount=1&type=multiple")
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
