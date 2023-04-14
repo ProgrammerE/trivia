@@ -4,7 +4,7 @@ import './App.css';
 function callTriviaApi() {
   fetch('https://opentdb.com/api.php?amount=1&type=multiple')
     .then(res => res)
-    .then(res => alert(res.text()))
+    .then(res => alert(res))
     .then(alert('callTriviaApi'))
     //.then(json => alert(JSON.stringify(json)))
 }
@@ -15,6 +15,7 @@ function callRaddyApi() {
     .then(res => alert(res))
     .then(alert('callRaddyApi'))
   console.log('hello')
+  console.log(res)
     //.then(json => alert(JSON.stringify(json)))
 }
 
@@ -22,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>hello call 2131</h1>
+        <h1>hello call 2133</h1>
         <button onClick={callTriviaApi}>Call trivia API</button>
         <button onClick={callRaddyApi}>Call raddy API</button>
       </header>
