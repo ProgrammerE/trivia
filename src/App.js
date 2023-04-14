@@ -1,46 +1,33 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { Component } from "react";
 import "./App.css";
 
-function App() {
-  const [question, setQuestion] = useState("");
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { apiResponse: "" };
+    }
 
-  const fetchQuestion = () => {
-    setQuestion("");
-    
-    axios
-      .get("https://opentdb.com/api.php?amount=1&type=multiple")
-      .then((response) => {
-        setQuestion(response);
-      });
-  };
+    callAPI() {
+        fetch("https://opentdb.com/api.php?amount=1&type=multiple")
+            .then(res => res.text())
+            .then(res => this.setState({ apiResponse: res }))
+            .catch(err => err);
+    }
 
-  useEffect(() => {
-    fetchQuestion();
-  }, []);
+    componentDidMount() {
+        this.callAPI();
+    }
 
-  const decodeHtml = (html) => {
-    var txt = document.createElement("textarea");
-    txt.innerHTML = html;
-    return txt.value;
-  };
-
-  return (
-    <div
-      className="App"
-    >
-      <header className="App-header">
-        <h1>{decodeHtml(question)}</h1>
-        <h1>{JSON.stringify(question)}</h1>
-
-        <br />
-        <br />
-        <button className="Button" onClick={fetchQuestion}>
-          Ask me another!
-        </button>
-      </header>
-    </div>
-  );
+    render() {
+        return (
+            <div className="App">
+                <header className="App-header">
+                    <h1>Welcome to React</h1>
+                </header>
+                <p>{this.state.apiResponse}</p>
+            </div>
+        );
+    }
 }
 
 export default App;
