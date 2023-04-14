@@ -9,6 +9,7 @@ function getData() {
     fetch("https://opentdb.com/api.php?amount=1&type=multiple")
     .then(res => res.json())
     .then(data => setData(data))
+    console.log(data);
   }, []);
 
   const decodeHtml = (html) => {
