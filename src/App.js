@@ -8,7 +8,7 @@ class App extends Component {
     }
 
     callAPI() {
-        fetch("https://opentdb.com/api.php?amount=1&type=multiple")
+        fetch("https://odd-teal-hummingbird-gear.cyclic.app/books")
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
