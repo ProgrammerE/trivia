@@ -13,7 +13,7 @@ function callRaddyApi() {
   fetch('https://odd-teal-hummingbird-gear.cyclic.app/')
     .then(res => res)
     .then(res => alert(res))
-    .then(alert('callRaddyApi')
+    .then(alert('callRaddyApi'))
     //.then(json => alert(JSON.stringify(json)))
 }
 
