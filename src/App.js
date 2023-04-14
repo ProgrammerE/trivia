@@ -3,15 +3,16 @@ import './App.css';
 
 function callApi() {
   fetch('https://odd-teal-hummingbird-gear.cyclic.app/books')
-    .then(res => res.json())
-    .then(json => alert(JSON.stringify(json)))
+    .then(res => res.text())
+    .then(text => alert(text))
+    //.then(json => alert(JSON.stringify(json)))
 }
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>hello call raddy</h1>
+        <h1>hello call raddy1949</h1>
         <button onClick={callApi}>Call API</button>
       </header>
     </div>
