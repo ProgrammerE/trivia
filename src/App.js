@@ -3,7 +3,7 @@ import axios from "axios";
 import "./App.css";
 
 function App() {
-  const [data, setData] = useState("");
+  const [data, setData] = useState({});
 
   const getData = () => {
     setData("");
