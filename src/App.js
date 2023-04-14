@@ -26,9 +26,7 @@ function App() {
   };
 
   return (
-    <div
-      className="App"
-    >
+    <div>
       <header className="App-header">
         <h1>{decodeHtml(question)}</h1>
         <h1>{JSON.stringify(question)}</h1>
