@@ -7,7 +7,7 @@ function App() {
   React.useEffect(() => {
     fetch("https://opentdb.com/api.php?amount=1&type=multiple")
       .then((res) => res.json())
-      .then((data) => setData(data.message));
+      .then((data) => setData(data));
   }, []);
 
   return (
