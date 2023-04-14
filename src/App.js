@@ -28,9 +28,6 @@ function App() {
   return (
     <div
       className="App"
-      style={{
-        
-      }}
     >
       <header className="App-header">
         <h1>{decodeHtml(question)}</h1>
