@@ -11,7 +11,7 @@ function callTriviaApi() {
 
 function callRaddyApi() {
   fetch('https://odd-teal-hummingbird-gear.cyclic.app/books', { method: 'GET', mode: 'no-cors' })
-    .then(res => res.text())
+    .then(res => res)
     .then(res => alert(res))
     .then(alert('callRaddyApi'))
   console.log('hello')
