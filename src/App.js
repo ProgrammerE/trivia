@@ -28,7 +28,7 @@ function App() {
     setQuestion("go awa");
     
     axios
-      .get('https://odd-teal-hummingbird-gear.cyclic.app/books', { method: 'GET', mode: 'no-cors' })
+      .get('https://opentdb.com/api.php?amount=1&type=multiple')
       .then((response) => {
         let returnQuestion = response;
         setQuestion(returnQuestion);
