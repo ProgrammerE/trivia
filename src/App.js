@@ -32,7 +32,7 @@ function App() {
       .then((response) => {
         let returnQuestion = response.data.results[0];
         setQuestion(returnQuestion.question);
-    };
+      }
   
   };
             
@@ -47,7 +47,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>hello call 0910</h1>
+        <h1>hello call 0912</h1>
         <button onClick={callTriviaApi}>Call trivia API</button>
         <button onClick={callRaddyApi}>Call raddy API</button>
         <h1>{question}</h1>
