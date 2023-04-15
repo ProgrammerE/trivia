@@ -30,7 +30,7 @@ function App() {
     axios
       .get("https://opentdb.com/api.php?amount=1&type=multiple")
       .then((response) => {
-        let returnQuestion = response.data;
+        let returnQuestion = response.data.results[0];
         setQuestion(returnQuestion);
                           }
       )
