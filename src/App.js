@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import './App.css';
 
 function callTriviaApi() {
@@ -19,12 +20,34 @@ function callRaddyApi() {
 }
 
 function App() {
+  
+  //------------------------------------------------------------
+  const [question, setQuestion] = useState("");
+  
+  const fetchQuestion = () => {
+    setQuestion("");
+    
+    axios
+      .get("https://opentdb.com/api.php?amount=1&type=multiple")
+      .then((response) => {
+        let returnQuestion = response.data.results[0];
+        setQuestion(returnQuestion.question);
+      
+  useEffect(() => {
+    fetchQuestion();
+  }, []);
+  
+  };
+  //---------------------------------------------------------------------------
+  
+  
   return (
     <div className="App">
       <header className="App-header">
-        <h1>hello call 0845</h1>
+        <h1>hello call 0905</h1>
         <button onClick={callTriviaApi}>Call trivia API</button>
         <button onClick={callRaddyApi}>Call raddy API</button>
+        <h1>{question}</h1>
       </header>
 
       <p>text</p>
