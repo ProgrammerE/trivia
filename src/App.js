@@ -34,7 +34,7 @@ function App() {
         setQuestion(returnQuestion.question);
       }
   
-  };
+  }
             
   useEffect(() => {
     fetchQuestion();
