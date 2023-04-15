@@ -51,7 +51,7 @@ function App() {
         <h1>hello call 0926</h1>
         <button onClick={callTriviaApi}>Call trivia API</button>
         <button onClick={callRaddyApi}>Call raddy API</button>
-        <h1>{{JSON.stringify(question)}}</h1>
+        <h1>{JSON.stringify(question)}</h1>
       </header>
 
       <p>text</p>
