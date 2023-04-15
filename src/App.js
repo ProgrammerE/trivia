@@ -12,7 +12,7 @@ function callTriviaApi() {
 function callRaddyApi() {
   fetch('https://odd-teal-hummingbird-gear.cyclic.app/books', { method: 'GET', mode: 'no-cors' })
     .then(res => res)
-    .then(res => alert(res.json()))
+    .then(res => alert(res.text()))
     .then(alert('callRaddyApi'))
   console.log('hello')
     //.then(json => alert(JSON.stringify(json)))
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>hello call 0759</h1>
+        <h1>hello call 0801</h1>
         <button onClick={callTriviaApi}>Call trivia API</button>
         <button onClick={callRaddyApi}>Call raddy API</button>
       </header>
