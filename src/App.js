@@ -28,7 +28,7 @@ function App() {
     setQuestion("");
     
     axios
-      .get('https://opentdb.com/api.php?amount=1&type=multiple'
+      .get('https://opentdb.com/api.php?amount=1&type=multiple')
       .then((response) => {
         let returnQuestion = response;
         setQuestion(returnQuestion);
