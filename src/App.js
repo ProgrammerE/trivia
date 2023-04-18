@@ -25,7 +25,7 @@ function App() {
   const [question, setQuestion] = useState("");
   
   const fetchQuestion = () => {
-    setQuestion("go awa");
+    setQuestion("");
     
     axios
       .get('https://odd-teal-hummingbird-gear.cyclic.app/books')
